@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>tic-toc game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="Q3.css" />
+  </head>
+  <body onload="track()">
+    <div id="container">
+      <div class="game-box">
+        <div
+          onclick="insert(this)"
+          id="d1"
+          class="cells border-bottom border-right"
+        ></div>
+        <div
+          onclick="insert(this)"
+          id="d2"
+          class="cells border-bottom border-right border-left"
+        ></div>
+        <div
+          onclick="insert(this)"
+          id="d3"
+          class="cells border-left border-bottom"
+        ></div>
+        <div
+          onclick="insert(this)"
+          id="d4"
+          class="cells border-right border-bottom border-top"
+        ></div>
+        <div
+          onclick="insert(this)"
+          id="d5"
+          class="cells border-right border-left border-top border-bottom"
+        ></div>
+        <div
+          onclick="insert(this)"
+          id="d6"
+          class="cells border-left border-bottom border-top"
+        ></div>
+        <div
+          onclick="insert(this)"
+          id="d7"
+          class="cells border-top border-right"
+        ></div>
+        <div
+          onclick="insert(this)"
+          id="d8"
+          class="cells border-top border-right border-left"
+        ></div>
+        <div
+          onclick="insert(this)"
+          id="d9"
+          class="cells border-top border-left"
+        ></div>
+      </div>
+      <div id="score-box">
+        <div class="score-card">
+          <div class="score-card-head">
+            <h2 id="heading">Enter Players Name</h2>
+          </div>
+          <div class="score-card-body-1">
+            <input
+              type="text"
+              id="player1-name"
+              placeholder="Enter name of player 1:"
+            />
+            <input
+              type="text"
+              id="player2-name"
+              placeholder="Enter name of player 2:"
+            />
+            <button
+              class="score-card-submit"
+              id="player2-name"
+              value="yes"
+              onclick="savePlayer(this)"
+            >
+              OK
+            </button>
+            <button class="score-card-submit" onclick="savePlayer(this)">
+              Play Without names
+            </button>
+          </div>
+          <div class="score-card-body-2">
+            <p id="player1-name-d" class="player-name"></p>
+            <span id="player1"></span>
+            <p id="player2-name-d" class="player-name"></p>
+            <span id="player2"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="Q3.js"></script>
+  </body>
+</html>
